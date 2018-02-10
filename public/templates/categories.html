@@ -1,0 +1,27 @@
+<table class="table table-hover">
+  <p>Add new category</p>
+  <input type="text" ng-model="newCategoryName" class="form-control" placeholder="Enter new Category name">
+  <button class="btn btn-primary" ng-click="addCategory()">Add!</button>
+  <br>
+
+  <h1>Categories</h1>
+  <thead>
+    <tr>
+      <td>No.</td>
+      <td>Name</td>
+      <td>Edit</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="c in categories">
+      <td>{{ $index + 1 }}</td>
+      <td>
+        <input class="form-control" type="text" ng-model="c.category_name" value="{{ c.category_name }}">
+      </td>
+      <td>
+        <button ng-click="editCategory(c.id_category)" class="btn btn-primary">Edit</button>
+        <button ng-click="deleteCategory(c.id_category)" class="btn btn-danger">Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>

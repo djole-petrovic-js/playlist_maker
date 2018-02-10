@@ -1,0 +1,53 @@
+.wrapper {
+  margin: 10px 0 10px 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.menu__item {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.admin {
+  min-height: 500px;
+}
+
+.cover_photo {
+  height: 100px;
+  widows: 100px;
+}
+
+.playlistWreaper , #search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#mainwrap {
+  min-height: 500px;
+}
+
+#pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.searchWreaper {
+  min-height: 500px;
+}
+
+.search_img {
+  max-width:200px;
+}
+
+#search {
+  margin-top:10px;
+}
+
+#search input[type=text]{
+  border-radius: 5px;
+  padding: 5px;
+}
+

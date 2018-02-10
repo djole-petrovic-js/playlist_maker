@@ -1,0 +1,32 @@
+<table class="table table-hover">
+  <h2>Visibility</h2>
+  <p>0 - For all users</p>
+  <p>1 - Users without account</p>
+  <p>2 - Registered users</p>
+  <p>3 - For administators</p>
+  <thead>
+    <tr>
+      <td>No.</td>
+      <td>Link</td>
+      <td>Path</td>
+      <td>Href Title Attr</td>
+      <td>Order</td>
+      <td>Visibility</td>
+      <td>Edit</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="link in links">
+      <td>{{ $index + 1 }}</td>
+      <td><input class="form-control" type="text" ng-model="link.link_name" value="{{ link.link_name }}"></td>
+      <td>{{ link.href }}</td>
+      <td>{{ link.title }}</td>
+      <td><input class="form-control" type="text" ng-model="link.link_order" value="{{ link.link_order }}"></td>
+      <td><input class="form-control" type="text" ng-model="link.permission" value="{{ link.permission }}"></td>
+      <td>
+        <button class="btn btn-primary" ng-click="editLink(link.id_link)">Edit</button>
+        <button class="btn btn-danger" ng-click="deleteLink(link.id_link)">Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>

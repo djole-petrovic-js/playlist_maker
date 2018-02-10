@@ -1,0 +1,23 @@
+<table class="table table-hover">
+  <h2>Playlists</h2>
+  <thead>
+    <tr>
+      <td>No.</td>
+      <td>Name</td>
+      <td>Created At</td>
+      <td>Created by </td>
+      <td>Category</td>
+      <td>Edit</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="p in playlists">
+      <td>{{ $index + 1 }}</td>
+      <td>{{ p.playlist_name }}</td>
+      <td>{{ p.created_at | date:"dd.MM.y" }}</td>
+      <td>{{ p.username }}</td>
+      <td>{{ p.category_name }}</td>
+      <td><button ng-click="deletePlaylist(p.id_playlist)" class="btn btn-danger">Delete</button></td>
+    </tr>
+  </tbody>
+</table>
